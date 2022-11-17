@@ -6,10 +6,18 @@
   align-items: center;
   flex-direction: column;
 }
+.messaging-container1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(180deg, rgb(38, 139, 186) 0.00%,rgba(180, 173, 183, 0.3) 100.00%,rgba(180, 173, 183, 0.3) 100.00%);
+}
 .messaging-navbar-interactive {
   width: 100%;
   display: flex;
   position: relative;
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
   align-items: center;
   padding-top: var(--dl-space-space-twounits);
   padding-left: var(--dl-space-space-threeunits);
@@ -21,7 +29,7 @@
   display: contents;
 }
 .messaging-logo {
-  height: 2rem;
+  height: var(--dl-size-size-small);
   text-decoration: none;
 }
 .messaging-desktop-menu {
@@ -45,6 +53,7 @@
   text-decoration: none;
 }
 .messaging-link {
+  font-weight: bold;
   margin-left: var(--dl-space-space-twounits);
   text-decoration: none;
 }
@@ -91,7 +100,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.messaging-container1 {
+.messaging-container2 {
   width: 100%;
   display: flex;
   align-items: center;
@@ -131,7 +140,7 @@
 .messaging-text06 {
   margin-bottom: var(--dl-space-space-unit);
 }
-.messaging-container2 {
+.messaging-container3 {
   flex: 0 0 auto;
   width: auto;
   display: flex;
@@ -159,14 +168,15 @@
   width: var(--dl-size-size-xsmall);
   height: var(--dl-size-size-xsmall);
 }
-.messaging-container3 {
+.messaging-container4 {
   width: 100%;
   height: 890px;
   display: flex;
   align-items: flex-start;
+  padding-top: var(--dl-space-space-twounits);
   flex-direction: column;
 }
-.messaging-container4 {
+.messaging-container5 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -242,7 +252,7 @@
   width: 24px;
   height: 24px;
 }
-.messaging-container5 {
+.messaging-container6 {
   flex: 0 0 auto;
   width: 70%;
   height: 100%;
@@ -252,14 +262,14 @@
   border-width: 1px;
   flex-direction: column;
 }
-.messaging-container6 {
+.messaging-container7 {
   flex: 1;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: flex-start;
 }
-.messaging-container7 {
+.messaging-container8 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -364,11 +374,11 @@
     border-width: 1px;
     border-radius: 150px;
   }
-  .messaging-container3 {
+  .messaging-container4 {
     width: 100%;
     height: 890px;
   }
-  .messaging-container4 {
+  .messaging-container5 {
     width: 100%;
   }
   .messaging-sidebar {
@@ -447,14 +457,14 @@
   .messaging-text19 {
     border-radius: var(--dl-radius-radius-radius4);
   }
-  .messaging-container5 {
+  .messaging-container6 {
     width: 70%;
     height: 100%;
   }
-  .messaging-container6 {
+  .messaging-container7 {
     height: 100%;
   }
-  .messaging-container7 {
+  .messaging-container8 {
     width: 100%;
     height: 100%;
     position: relative;
@@ -547,11 +557,16 @@
   }
   .messaging-navbar-interactive {
     height: auto;
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
   }
-  .messaging-container3 {
-    width: 100%;
+  .messaging-link {
+    font-weight: 700;
+    text-decoration: none;
   }
   .messaging-container4 {
+    width: 100%;
+  }
+  .messaging-container5 {
     width: 100%;
     height: 100%;
     align-self: flex-end;
@@ -688,12 +703,12 @@
     align-self: center;
     padding-left: var(--dl-space-space-oneandhalfunits);
   }
-  .messaging-container5 {
+  .messaging-container6 {
     flex: 1;
     width: 100%;
     height: 890px;
   }
-  .messaging-container6 {
+  .messaging-container7 {
     width: 100%;
     height: 890px;
     position: relative;
