@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chores</title>
+    <title>The Good Housemate</title>
     <link
       rel="stylesheet"
       href="../bootstrap-5.2.2-dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="cost.css" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!-- <script src="../bootstrap-5.2.2-dist/js/bootstrap.min.js"></script> -->
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,5 +41,41 @@
         </div>
       </div>
     </nav>
+    <div class="btn-group p-3">
+      <button
+        class="btn btn-secondary btn-lg dropdown-toggle bg-white border-white text-dark"
+        type="button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Outstanding
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Owed</a>
+        <a class="dropdown-item" href="#">History</a>
+      </div>
+    </div>
+    <div id="cost-items-container">
+      <!-- <div class="container border border-black text-center rounded">
+        <div class="row">
+          <div class="col">To: Namit</div>
+          <div class="col">Items: 5</div>
+          <div class="col">Price: $100</div>
+          <div class="col">
+            <button type="button" class="item-button" id="pay-button">
+              Pay All
+            </button>
+          </div>
+          <div class="col">
+            <button type="button" class="item-button" id="details-button">
+              Show Details
+            </button>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <button id="add-cost" class="rounded-circle" type="button">+</button>
+    <script src="./cost.js"></script>
   </body>
 </html>
