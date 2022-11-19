@@ -1,4 +1,33 @@
 const monthNames = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const dayEvents = [
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"<p>Meghan - Practice</p>",
+	"<p>Meghan - Practice</p>",
+	"<p style=>Ethan - Class</p>",
+	"<p>Ethan - Class</p><p>Justin - Class</p>",
+	"<p>Ethan - Class</p>",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	""
+];
+
 let currMonth = new Date().getMonth();
 let currYear = new Date().getFullYear();
 let workingMonth = currMonth;
@@ -24,7 +53,7 @@ function buildCalendar() {
 	let startDay = new Date(workingYear,workingMonth, 1).getDay();
 	let numDays = getDaysInMonth(workingYear, workingMonth);
 	let result = "<tbody>";
-	let numRows = startDay + numDays > 35 ? 6 : 5;
+	let numRows = (startDay + numDays)/7;
 	for (let i = 0; i < numRows; i++) {
 		result += "<tr>";
 		for (let j = 1; j < 7+1; j++) {
@@ -44,6 +73,26 @@ function buildCalendar() {
 function buildDateDisp() {
 	let element = document.getElementById("currDateDisp");
 	element.innerHTML = "<h4>" + monthNames[workingMonth] + " " + workingYear + "</h4>";
+}
+
+function buildBreakdownHeader() {
+	let element = document.getElementById("dayBreakdownHeader");
+	element.innerHTML = monthNames[selectedDate.month] + " " + selectedDate.day + ", " + selectedDate.year;
+}
+
+function buildBreakdownContent() {
+	let element = document.getElementById("dayBreakdownContent");
+	let contents = "";
+	for (let i = 0; i < 24; i++) {
+		contents += "<tr>";
+		let dispNum = (12+i)%12;
+		dispNum = dispNum == 0 ? 12 : dispNum;
+		let dispSuffix = (12/i) > 1 ? "AM" : "PM";
+		contents += "<td>" + dispNum + ":00" + dispSuffix + "</td>"
+		contents += "<td colspan='2'>" + dayEvents[i] + "</td>"
+		contents += "</tr>"
+	}
+	element.innerHTML = contents;
 }
 
 function handleUpdate(val) {
