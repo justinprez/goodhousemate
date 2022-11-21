@@ -2,29 +2,32 @@ const monthNames = ["January", "Febuary", "March", "April", "May", "June", "July
 const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const tasksLocation = "../tasksEvents.json";
 
+var currDateString = new Date();
+currDateString = currDateString.getFullYear() + "-" + (currDateString.getMonth() + 1) + "-" + currDateString.getDate();
+
 const events = [
 	{
 		"name": "Class",
 		"person": "Ethan",
-		"date": "2022-11-21",
+		"date": currDateString,
 		"times": [6,7,8]
 	},
 	{
 		"name": "Class",
 		"person": "Namit",
-		"date": "2022-11-21",
+		"date": currDateString,
 		"times": [7,8,9,10]
 	},
 	{
 		"name": "Private event",
 		"person": "Justin",
-		"date": "2022-11-21",
+		"date": currDateString,
 		"times": [8,9]
 	},
 	{
 		"name": "Dinner",
 		"person": "Janek",
-		"date": "2022-11-21",
+		"date": currDateString,
 		"times": [18,19]
 	}
 ]
