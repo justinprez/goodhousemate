@@ -289,6 +289,8 @@
   .home-navlink5 {
     width: 258px;
     height: 58px;
+    color: black;
+    background-color: #dee0df;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -335,6 +337,8 @@
     display: inline-block;
     position: relative;
     z-index: 1;
+    color: black;
+    background-color: #dee0df;
     font-size: 32px;
     box-shadow: 5px 5px 10px 0px #d4d4d4;
     margin-top: 10%;
@@ -395,6 +399,8 @@
   .home-navlink7 {
     width: 258px;
     height: 58px;
+    color: black;
+    background-color: #dee0df;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -410,6 +416,8 @@
   .home-navlink8 {
     width: 258px;
     height: 58px;
+    color: black;
+    background-color: #dee0df;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -425,6 +433,8 @@
   .home-navlink9 {
     width: 258px;
     height: 58px;
+    color: black;
+    background-color: #dee0df;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -440,6 +450,8 @@
   .home-navlink10 {
     width: 258px;
     height: 58px;
+    color: black;
+    background-color: #dee0df;
     display: inline-block;
     position: relative;
     z-index: 1;
