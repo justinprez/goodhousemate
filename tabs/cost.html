@@ -16,7 +16,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand px-3" href="../index.html">Home</a>
+      <a class="navbar-brand" href="../index.html">Home</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -42,23 +42,183 @@
         </div>
       </div>
     </nav>
-    <div class="btn-group p-3">
-      <button
-        class="btn btn-secondary btn-lg dropdown-toggle bg-white border-white text-dark"
-        type="button"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
+    <div class="row my-6">
+      <div
+        class="col-sm-10 btn-group px-0 mx-auto my-3"
+        id="select-priority"
+        role="group"
       >
-        Outstanding
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Owed</a>
-        <a class="dropdown-item" href="#">History</a>
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="outstanding-tab"
+          value="Low"
+          autocomplete="off"
+          checked
+        />
+        <label class="btn btn-outline-dark" for="outstanding-tab">
+          Outstanding
+        </label>
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="owed-tab"
+          value="Medium"
+          autocomplete="off"
+        />
+        <label class="btn btn-outline-dark" for="owed-tab"> Owed </label>
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="history-tab"
+          value="High"
+          autocomplete="off"
+          disabled
+        />
+        <label class="btn btn-outline-dark" for="history-tab"> History </label>
       </div>
     </div>
+
     <div id="cost-items-container"></div>
+
+    <div class="add-expense-screen">
+      <div class="modal rounded text-center">
+        <h3>Add Expense</h3>
+        <form action="">
+          <div class="form-item-container">
+            <label for="title">Item Name(s): </label>
+            <input
+              type="text"
+              id="title"
+              class="border border-top-0 border-start-0 border-end-0 border-dark bg-light"
+              required
+            />
+          </div>
+
+          <div class="form-item-container">
+            <label for="amount">Amount ($): </label>
+            <input
+              type="number"
+              id="amount"
+              step="0.01"
+              class="border border-top-0 border-start-0 border-end-0 border-dark bg-light"
+              required
+            />
+          </div>
+
+          <label for="split-with">Split With:</label>
+          <select class="select" multiple>
+            <option value="Ethan">Ethan</option>
+            <option value="Janek">Janek</option>
+            <option value="Justin">Justin</option>
+            <option value="Meghan">Meghan</option>
+          </select>
+          <p class="msg-split-with">
+            Hold down the Ctrl (windows) or Command (Mac) button to select
+            multiple options.
+          </p>
+
+          <div class="form-item-container">
+            <label for="split-type" class="pe-5 me-5">Split Type: </label>
+            <div>
+              <input
+                type="radio"
+                id="evenly"
+                name="split_type"
+                value="evenly"
+                class="ms-3"
+              />
+              <label for="evenly">Evenly</label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                id="manual"
+                name="split_type"
+                value="manual"
+                class="ms-3"
+              />
+              <label for="manual">Manual</label>
+            </div>
+          </div>
+
+          <div class="form-item-container">
+            <label for="description">Description (optional):</label>
+            <input
+              type="text"
+              id="description"
+              class="border border-top-0 border-start-0 border-end-0 border-dark bg-light"
+            />
+          </div>
+
+          <div class="form-item-container">
+            <label for="due-date">Due Date (optional):</label>
+            <input
+              type="date"
+              id="due-date"
+              class="border border-top-0 border-start-0 border-end-0 border-dark bg-light"
+            />
+          </div>
+
+          <div class="form-item-container">
+            <label for="preferred-payment" class="me-3"
+              >Preferred Payment:
+            </label>
+            <div>
+              <input
+                type="radio"
+                id="e-transfer"
+                name="preferred-payment"
+                value="e-transfer"
+                class="ms-3"
+              />
+              <label for="e-transfer">E-transfer</label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                id="paypal"
+                name="preferred-payment"
+                value="paypal"
+                class="ms-3"
+              />
+              <label for="paypal">Paypal</label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                id="cash"
+                name="preferred-payment"
+                value="cash"
+                class="ms-3"
+              />
+              <label for="cash">Cash</label>
+            </div>
+          </div>
+
+          <button type="submit" id="submit">Submit</button>
+        </form>
+      </div>
+    </div>
     <button id="add-cost" class="rounded-circle" type="button">+</button>
     <script src="./cost.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
