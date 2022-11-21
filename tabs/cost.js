@@ -25,7 +25,7 @@ $(function () {
         {
           name: "Broom",
           price: 10.0,
-          created: new Date(-50000),
+          created: new Date(),
           due: new Date(2023, 1, 1),
           desc: "",
         },
