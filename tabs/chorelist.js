@@ -9,7 +9,7 @@ var chorelist = [
        "date": "2022-11-18",
     },
     {
-        "completed": true,
+        "completed": false,
         "chore-description": "Clean shower",
         "priority": "Medium",
         "room": "Washroom",
