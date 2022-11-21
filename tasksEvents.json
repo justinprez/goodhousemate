@@ -1,0 +1,16 @@
+[
+	{
+		"chore-description": "description",
+		"priority": "!!",
+		"room": "string",
+		"person": "string",
+		"date": "2022-11-05"
+	},
+	{
+		"chore-description": "description 2",
+		"priority": "!",
+		"room": "string 2",
+		"person": "string 2",
+		"date": "2022-11-05"
+	}
+]
