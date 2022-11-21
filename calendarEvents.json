@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Class",
+		"person": "Ethan",
+		"date": "2022-11-05",
+		"times": [6,7,8]
+	},
+	{
+		"name": "Event 2",
+		"person": "Justin",
+		"date": "2022-11-05",
+		"times": [8,9]
+	}
+]
