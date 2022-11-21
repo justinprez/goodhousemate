@@ -2,29 +2,32 @@ const monthNames = ["January", "Febuary", "March", "April", "May", "June", "July
 const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const tasksLocation = "../tasksEvents.json";
 
+var currDateString = new Date();
+currDateString = currDateString.getFullYear() + "-" + (currDateString.getMonth() + 1) + "-" + currDateString.getDate();
+
 const events = [
 	{
 		"name": "Class",
 		"person": "Ethan",
-		"date": "2022-11-21",
+		"date": currDateString,
 		"times": [6,7,8]
 	},
 	{
 		"name": "Class",
 		"person": "Namit",
-		"date": "2022-11-21",
+		"date": currDateString,
 		"times": [7,8,9,10]
 	},
 	{
 		"name": "Private event",
 		"person": "Justin",
-		"date": "2022-11-21",
+		"date": currDateString,
 		"times": [8,9]
 	},
 	{
 		"name": "Dinner",
 		"person": "Janek",
-		"date": "2022-11-21",
+		"date": currDateString,
 		"times": [18,19]
 	}
 ]
@@ -148,20 +151,20 @@ function buildTasksHeader() {
 }
 
 function buildTasksBody() {
-  fetch(tasksLocation).then((response) => response.json()).then((data) => {
-    let element = document.getElementById("tasksBody");
-    let contents = "";
-    for (let i = 0; i < data.length; i++) {
-      let dateInfo = String(data[i].date).split("-");
-      if (dateEqualsSelected(dateInfo)) {
-        contents += "<tr>";
-        contents += "<td>" + data[i]["chore-description"] + "</td>";
-        contents += "<td>" + data[i].person + "</td>";
-        contents += "</tr>";
-      }
+  data =  JSON.parse(localStorage.getItem('chores'));
+  let element = document.getElementById("tasksBody");
+  let contents = "";
+  for (let i = 0; i < data.length; i++) {
+    let dateInfo = String(data[i].date).split("-");
+    if (dateEqualsSelected(dateInfo)) {
+      contents += "<tr>";
+      contents += "<td>" + data[i]["chore-description"] + "</td>";
+      contents += "<td>" + data[i].person + "</td>";
+      contents += "<td " + (data[i].completed ? "style='color:green'>Complete" : "style='color:red'>Incomplete") + "</td>";
+      contents += "</tr>";
     }
-    element.innerHTML = contents;
-  });
+  }
+  element.innerHTML = contents;
 }
 
 function dateEqualsSelected(d) {
@@ -182,3 +185,5 @@ function init() {
   buildTasksHeader();
   buildTasksBody();
 }
+
+// 

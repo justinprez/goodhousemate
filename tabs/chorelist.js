@@ -1,3 +1,7 @@
+
+var currDateString = new Date();
+currDateString = currDateString.getFullYear() + "-" + (currDateString.getMonth() + 1) + "-" + currDateString.getDate();
+
 var chorelist = [
     {
        "completed": true,
@@ -6,16 +10,16 @@ var chorelist = [
        "room": "Kitchen",
        "person": "Namit",
        "next": "Janek",
-       "date": "2022-11-18",
+       "date": currDateString,
     },
     {
-        "completed": true,
+        "completed": false,
         "chore-description": "Clean shower",
         "priority": "Medium",
         "room": "Washroom",
         "person": "Justin",
         "next": "N/A",
-        "date": "2022-11-20",    
+        "date": currDateString,    
      },
 ];
 
