@@ -6,25 +6,25 @@ const events = [
 	{
 		"name": "Class",
 		"person": "Ethan",
-		"date": "2022-11-05",
+		"date": "2022-11-21",
 		"times": [6,7,8]
 	},
 	{
 		"name": "Class",
 		"person": "Namit",
-		"date": "2022-11-05",
+		"date": "2022-11-21",
 		"times": [7,8,9,10]
 	},
 	{
 		"name": "Private event",
 		"person": "Justin",
-		"date": "2022-11-05",
+		"date": "2022-11-21",
 		"times": [8,9]
 	},
 	{
 		"name": "Dinner",
 		"person": "Janek",
-		"date": "2022-11-05",
+		"date": "2022-11-21",
 		"times": [18,19]
 	}
 ]
