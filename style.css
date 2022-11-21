@@ -217,7 +217,7 @@
     width: 552px;
     height: 406px;
     object-fit: cover;
-    border-radius: var(--dl-radius-radius-radius8);
+    border-radius: 8px;
   }
   .home-container08 {
     flex: 0 0 auto;
