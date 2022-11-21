@@ -106,23 +106,30 @@
                   <!-- Wil be populated by script -->
                   <div class="col"><h4 id="dayBreakdownHeader">Error</h4></div>
                   <div class="col-md-auto">
-                    <button type="button" class="btn btn-link">Jump To</button>
+                    <button type="button" class="btn btn-link" onClick="jumpTo()">Jump To</button>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
           <div class="row"> <!-- Content -->
             <div class="col">
-              <table class="table">
-                <thead>
-                  <th>Hour</th>
-                  <th>Events</th>
-                </thead>
-                <!-- Will be populated by script -->
-                <tbody id="dayBreakdownContent"></tbody>
-              </table>
+              <div class="panel table-responsive" style="max-height: 700px">
+                <table class="table">
+                  <thead>
+                    <th>Hour</th>
+                    <th>Events</th>
+                  </thead>
+                  <!-- Will be populated by script -->
+                  <tbody id="dayBreakdownContent"></tbody>
+                </table>
+              </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn col-12 btn-primary" disabled>New Event</button>
+            </div>
           </div>
         </div>
       </div>
