@@ -9,7 +9,7 @@ body {
   right: 30px;
   padding: 5px 12px;
   border: 1px solid rgb(50, 50, 50);
-  color: rgb(50, 50, 50);
+  color: rgb(255, 255, 255);
   background-color: white;
   z-index: 10;
   /* border-radius: 30px; */
@@ -17,8 +17,8 @@ body {
 
 #add-cost:hover {
   border: 1px solid rgb(50, 50, 50);
-  background-color: rgb(34, 25, 25);
-  color: white;
+  background-color: #0f3164;
+  color: black;
 }
 
 #cost-items-container > div > div > div:first-child {
