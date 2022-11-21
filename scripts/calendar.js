@@ -157,6 +157,7 @@ function buildTasksBody() {
       contents += "<tr>";
       contents += "<td>" + data[i]["chore-description"] + "</td>";
       contents += "<td>" + data[i].person + "</td>";
+      contents += "<td " + (data[i].completed ? "style='color:green'>Complete" : "style='color:red'>Incomplete") + "</td>";
       contents += "</tr>";
     }
   }
@@ -181,3 +182,5 @@ function init() {
   buildTasksHeader();
   buildTasksBody();
 }
+
+// 
