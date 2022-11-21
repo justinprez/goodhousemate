@@ -5,6 +5,7 @@ var chorelist = [
        "priority": "High",
        "room": "Kitchen",
        "person": "Namit",
+       "next": "Janek",
        "date": "2022-11-18",
     },
     {
@@ -13,6 +14,7 @@ var chorelist = [
         "priority": "Medium",
         "room": "Washroom",
         "person": "Justin",
+        "next": "N/A",
         "date": "2022-11-20",    
      },
 ];

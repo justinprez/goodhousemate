@@ -1,4 +1,4 @@
-console.log(localStorage.getItem('chores'))
+// console.log(localStorage.getItem('chores'))
 chorelist = JSON.parse(localStorage.getItem('chores'))
 
 
@@ -22,6 +22,7 @@ for(const obj of chorelist){
 }
 
 
+var ppl = ["Ethan", "Janek", "Justin", "Meghan", "Namit"]
 
 var btn = document.getElementById('btnsubmit');
 btn.addEventListener('click', func);
@@ -32,14 +33,27 @@ function func() {
     room = document.getElementById("select-room");
     person = document.getElementById("select-person")
     date = document.getElementById("select-date");
+    rotate = document.getElementById("rotate-assign");
     
     if (chore.checkValidity() && room.checkValidity() && person.checkValidity() && date.checkValidity()) {
+        var next_person = "N/A"
+        
+        if (rotate.checked) {
+            const index = ppl.indexOf(person.value);
+            if (index > -1) {
+                ppl.splice(index, 1);
+            }
+            const random = Math.floor(Math.random() * ppl.length);
+            next_person = ppl[random];
+        }
+        
         new_chore = {
             "completed": false,
             "chore-description": document.getElementById("chore-description").value,
             "priority": document.querySelector('input[name="btnradio"]:checked').value,
             "room": document.getElementById("select-room").value,
             "person": document.getElementById("select-person").value,
+            "next": next_person,
             "date": document.getElementById("select-date").value,
         };
 
@@ -53,7 +67,7 @@ function func() {
         
         // console.log(chorelist)
         localStorage.setItem("chores",JSON.stringify(chorelist))
-        console.log(localStorage.getItem('chores'))
+        // console.log(localStorage.getItem('chores'))
     }
 
 }
