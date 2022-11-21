@@ -677,7 +677,8 @@
   width:160px;
   border-radius: 8px;
   height:50px;
-  background: #dde1e7;
+  background: #0d6efd;
+  color: white;
   box-shadow: -3px -3px 7px #fffdfdcc,3px 3px 5px rgba(94, 104, 121, 0.342);
   text-align:center;
   font-size:22px;
