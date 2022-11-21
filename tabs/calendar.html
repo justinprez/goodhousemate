@@ -47,42 +47,56 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <!-- Calendar view -->
-          <div class="row align-items-center"> <!-- Calendar Header -->
-            <div class="col-md-auto">
-              <button type="button" class="btn btn-primary" onClick="handleUpdate(-1)">Back</button>
+          <div class="container">
+            <!-- Calendar view -->
+            <div class="row align-items-center"> <!-- Calendar Header -->
+              <div class="col-md-auto">
+                <button type="button" class="btn btn-primary" onClick="handleUpdate(-1)">Back</button>
+              </div>
+              <!-- Will be populated by script -->
+              <div class="col text-center" id="currDateDisp"></div>
+              <div class="col-md-auto">
+                <button type="button" class="btn btn-link" onClick="returnHome()">Today</button>
+                <button type="button" class="btn btn-primary" onClick="handleUpdate(1)">Forward</button>
+              </div>
             </div>
-            <!-- Will be populated by script -->
-            <div class="col text-center" id="currDateDisp"></div>
-            <div class="col-md-auto">
-              <button type="button" class="btn btn-link" onClick="returnHome()">Today</button>
-              <button type="button" class="btn btn-primary" onClick="handleUpdate(1)">Forward</button>
+            <div class="row"> <!-- Calendar grid -->
+              <div class="col">
+                <table class="table">
+                  <thead>
+                    <td>Sunday</td>
+                    <td>Monday</td>
+                    <td>Tuesday</td>
+                    <td>Wednesday</td>
+                    <td>Thursday</td>
+                    <td>Friday</td>
+                    <td>Saturday</td>
+                  </thead>
+                  <tbody>
+                    <!-- Will be populated by script -->
+                    <table class="table table-bordered" id="calendarContent">
+                    </table>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
-          <div class="row"> <!-- Calendar grid -->
-            <div class="col">
-              <table class="table">
-                <thead>
-                  <td>Sunday</td>
-                  <td>Monday</td>
-                  <td>Tuesday</td>
-                  <td>Wednesday</td>
-                  <td>Thursday</td>
-                  <td>Friday</td>
-                  <td>Saturday</td>
-                </thead>
-                <tbody>
-                  <!-- Will be populated by script -->
-                  <table class="table table-bordered" id="calendarContent">
-                  </table>
-                </tbody>
-              </table>
+            <!-- Tasks breakdown -->
+            <div class="row">
+              <div class="col">
+                <h3>Tasks</h3>
+                <h4 id="tasksHeaderDate"></h4>
+                <table class="table">
+                  <thead>
+                    <th>Task</th>
+                    <th>Person</th>
+                  </thead>
+                  <tbody id="tasksBody"></tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
-        
-        
-          
+
         <div class="col">
           <!-- Daily Breakdown -->
           <div class="row"> <!-- Header -->
@@ -116,10 +130,7 @@
   </body>
   
   <script type="text/javascript">
-    buildDateDisp();
-    buildCalendar();
-    buildBreakdownHeader();
-    buildBreakdownContent();
+    init();
   </script>
   
 </html>
