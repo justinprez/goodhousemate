@@ -148,20 +148,19 @@ function buildTasksHeader() {
 }
 
 function buildTasksBody() {
-  fetch(tasksLocation).then((response) => response.json()).then((data) => {
-    let element = document.getElementById("tasksBody");
-    let contents = "";
-    for (let i = 0; i < data.length; i++) {
-      let dateInfo = String(data[i].date).split("-");
-      if (dateEqualsSelected(dateInfo)) {
-        contents += "<tr>";
-        contents += "<td>" + data[i]["chore-description"] + "</td>";
-        contents += "<td>" + data[i].person + "</td>";
-        contents += "</tr>";
-      }
+  data =  JSON.parse(localStorage.getItem('chores'));
+  let element = document.getElementById("tasksBody");
+  let contents = "";
+  for (let i = 0; i < data.length; i++) {
+    let dateInfo = String(data[i].date).split("-");
+    if (dateEqualsSelected(dateInfo)) {
+      contents += "<tr>";
+      contents += "<td>" + data[i]["chore-description"] + "</td>";
+      contents += "<td>" + data[i].person + "</td>";
+      contents += "</tr>";
     }
-    element.innerHTML = contents;
-  });
+  }
+  element.innerHTML = contents;
 }
 
 function dateEqualsSelected(d) {
